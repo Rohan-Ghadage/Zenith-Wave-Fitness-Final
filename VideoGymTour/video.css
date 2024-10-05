@@ -1,0 +1,62 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fullscreen video container */
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff512f, #f09819, #ff4e50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Header wrapper to align logo and title horizontally */
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+/* Logo styling */
+.logoimage {
+    width: 50px;  /* Adjust size as necessary */
+    height: auto;
+    margin-right: 1rem; /* Adds space between the logo and heading */ 
+    border-radius: 25%;
+}
+
+/* Title styling */
+.header-wrapper h1 {
+    font-size: 48px;
+    color: #000000;
+}
+
+/* Custom styles for the video */
+.custom-video {
+    width: 70%;
+    height: 70%;
+    z-index: 1;
+    opacity: 0.85;
+    border: none;
+    margin-top: 2rem;  /* Adds space between the video and the title/logo */
+}
