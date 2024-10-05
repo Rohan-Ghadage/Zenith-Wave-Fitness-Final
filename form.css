@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+form {
+  width: 600px;
+  margin: 10px auto;
+  padding: 25px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5, #ff9a9e);
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9), 0px 0px 12px rgba(255, 255, 255, 0.6);
+}
+
+form h2 {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+a {
+  display: block;
+  color: blue;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+#input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 14px;
+  background: transparent;
+}
+
+#input::placeholder{
+  color: white;
+}
+
+select {
+  color: white;
+}
+
+option {
+background-color: rgba(51, 51, 51, 0.9); /* Semi-transparent dark gray */
+}
+
+
+button{
+  width: 50%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff4081, #ffcc00);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ffcc00, #ff4081); /* Reverse gradient on hover */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically (if needed) */
+  /* height: 100vh; Set to 100% of the viewport height (optional) */
+}
+
+.register {
+background: linear-gradient(135deg, #ff4081, #ffcc00);
+border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.register a{
+border-bottom: none;
+
+}
