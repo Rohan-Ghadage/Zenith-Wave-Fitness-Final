@@ -11,8 +11,6 @@ Content:
 -->Virtual Tour
 -->Razorpay Payment System(API)
 
-![image](https://github.com/user-attachments/assets/bbff5264-ee51-453a-b556-4b7595d8e111)
-
 ____________________________________
 Technology Used 
 Frontend : Html, Css, Javascript, SwiperJs
