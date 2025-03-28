@@ -1,4 +1,6 @@
 #  Zenith Wave Fitness 
+📌 **website:** https://rohan-ghadage.github.io/Zenith-Wave-Fitness-Final/
+
 Welcome to the **Zenith Wave Fitness** project—a website crafted to offer a seamless, interactive, and engaging platform for fitness enthusiasts. Dive into a world of **workouts, expert guidance, nutrition plans,** and more.
 
 ## ✨ Project Highlights
