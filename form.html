@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Form Zenith Wave Fitness</title>    
     <link rel="stylesheet" href="form.css">
     <link rel="icon" type="image/x-icon" href="icon.png"> 
@@ -12,14 +12,18 @@
     <form id="registrationform">
         <h2>Register for Zenith Wave Fitness</h2>
 
-        <!-- Full Name: no character-length validation now -->
-        <input type="text" id="input" name="full_name" placeholder="Full Name" required><br>
+        <!-- Full Name: must contain at least 3 letters -->
+        <input type="text" id="input" name="full_name" placeholder="Full Name" 
+       required pattern="[A-Za-z\s]+"><br>
 
+        <!-- Email: standard HTML5 validation -->
         <input type="email" id="input" name="email" placeholder="Email" required><br>
 
+        <!-- Phone: 10-digit numeric only -->
         <input type="tel" id="input" name="phone" placeholder="Phone Number" 
-               required pattern="[0-9]{10}" title="Phone number must be exactly 10 digits."><br>
+               required pattern="[0-9]{10}"><br>
 
+        <!-- Membership Plan -->
         <select id="input" name="membership_plan" required>
           <option value="" disabled selected>Membership Plan</option>
           <option value="basic">Basic</option>
@@ -27,26 +31,45 @@
           <option value="family">Family Plan</option>
         </select><br>
 
-        <input type="text" id="input" name="address" placeholder="Address"><br>
+        <!-- Address: at least 5 characters -->
+        <input type="text" id="input" name="address" placeholder="Address" 
+               required minlength="5" 
+               title="Please enter a valid address."><br>
 
+        <!-- Gender -->
         <select id="input" name="gender" required>
           <option value="" disabled selected>Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select><br>
 
+        <!-- Date of Birth -->
         <input type="date" id="input" name="dob" required><br>
 
-        <input type="text" id="input" name="goals" placeholder="Describe your Fitness Goals"><br>
+        <!-- Fitness Goals -->
+        <select id="input" name="goals" required title="Please select your fitness goal.">
+          <option value="" disabled selected>Select your Fitness Goal</option>
+          <option value="weight_gain">Weight Gain</option>
+          <option value="weight_loss">Weight Loss</option>
+        </select><br>
 
+
+        <!-- Terms Checkbox -->
         <label>
             <input type="checkbox" id="checkbox" name="terms" required> 
             I agree to the Terms and Conditions
         </label><br><br>
 
-        <!-- Redirect to popup.html on successful validation -->
+        <!-- Button: use 'onsubmit' to prevent redirect until validation passes -->
         <div class="button-container">
-            <button type="submit" class="register" onclick="window.location.href='popup.html'; return false;">
+            <button type="submit" class="register" 
+                    onclick="
+                        const form = document.getElementById('registrationform');
+                        if (form.reportValidity()) {
+                            window.location.href='popup.html';
+                        }
+                        return false;
+                    ">
                 Register
             </button>
         </div>
