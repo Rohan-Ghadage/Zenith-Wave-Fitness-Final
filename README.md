@@ -22,7 +22,7 @@ This project focuses on creating a **user-friendly interface** where members can
 
 ---
 
-## 🚀 Technology Stack
+## 🚀 Technology Stack Used
 **Frontend:**
 - **HTML, CSS, JavaScript** for structure, styling, and interactivity.
 - **Swiper.js** for dynamic slider elements.
@@ -54,3 +54,4 @@ This project focuses on creating a **user-friendly interface** where members can
 ![Screenshot 2024-10-31 214542](https://github.com/user-attachments/assets/0382f3e7-74d6-4784-8c12-c98123187c52)
 ## Razorpay API
 ![Screenshot 2024-10-31 214706](https://github.com/user-attachments/assets/0fc27c26-0bcc-4c1e-bb5c-b5dd60f567a2)
+
