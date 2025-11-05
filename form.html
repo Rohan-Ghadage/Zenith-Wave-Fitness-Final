@@ -3,48 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <title>Register Form Zenith Wave Fitness</title>    
-        <link rel="stylesheet" href="form.css">
-        <!-- icon link -->
-        <link rel="icon" type="image/x-icon" href="icon.png"> 
+    <title>Register Form Zenith Wave Fitness</title>    
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" type="image/x-icon" href="icon.png"> 
 </head>
 <body>
-    <form id="registrationform" action="/submit" method="post">
-        <h2>Register for Zenith Wave Fitness</h2>
-        <input type="text" id="input" name="full_name" placeholder="Full Name" required> <br>
-      
-        <input type="email" id="input" name="email" placeholder="Email" required> <br>
-      
-        <input type="tel" id="input" name="phone" placeholder="Phone Number" required> <br>
 
-        <select id="input" name="membership_plan">
-          <option value="membership_plan" disabled selected>Membership Plan</option>
+    <form id="registrationform">
+        <h2>Register for Zenith Wave Fitness</h2>
+
+        <!-- Full Name: no character-length validation now -->
+        <input type="text" id="input" name="full_name" placeholder="Full Name" required><br>
+
+        <input type="email" id="input" name="email" placeholder="Email" required><br>
+
+        <input type="tel" id="input" name="phone" placeholder="Phone Number" 
+               required pattern="[0-9]{10}" title="Phone number must be exactly 10 digits."><br>
+
+        <select id="input" name="membership_plan" required>
+          <option value="" disabled selected>Membership Plan</option>
           <option value="basic">Basic</option>
           <option value="premium">Premium</option>
           <option value="family">Family Plan</option>
         </select><br>
-        
 
         <input type="text" id="input" name="address" placeholder="Address"><br>
-      
-        <select id="input" name="gender">
-          <option value="gender" disabled selected>Gender</option>
+
+        <select id="input" name="gender" required>
+          <option value="" disabled selected>Gender</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select><br>
-      
-        <input type="text" id="input" name="dob" placeholder="Date of Birth"><br>
-      
+
+        <input type="date" id="input" name="dob" required><br>
+
         <input type="text" id="input" name="goals" placeholder="Describe your Fitness Goals"><br>
 
-        <a href="#">I agree to the Terms and Conditions:</a>
-        <input type="checkbox" id="checkbox" name="terms" required><br>
-      
+        <label>
+            <input type="checkbox" id="checkbox" name="terms" required> 
+            I agree to the Terms and Conditions
+        </label><br><br>
+
+        <!-- Redirect to popup.html on successful validation -->
         <div class="button-container">
-          <button type="submit" class="register">
-              <a href="popup.html">Register</a>
-          </button>
-      </div>
-    </form>     
+            <button type="submit" class="register" onclick="window.location.href='popup.html'; return false;">
+                Register
+            </button>
+        </div>
+
+    </form>
+
 </body>
 </html>
