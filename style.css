@@ -90,7 +90,7 @@ header {
     font-family: -apple-system, sans-serif; 
     gap: 0.6rem;
     background: rgba(14, 14, 14, 0.6);
-    border: 1px solid #1f1f1f;
+    border: 1px solid rgba(255,255,255,0.18);
     border-radius: 9999px; /* full rounded container */
     padding: 0.4rem 0.6rem;
     backdrop-filter: blur(6px);
@@ -111,8 +111,8 @@ header {
 
 .navbar a:hover,
 .navbar a:active {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
+    color: #0a0a0a;
+    background: #ffffff;
 }
 
 .nav-btn {
