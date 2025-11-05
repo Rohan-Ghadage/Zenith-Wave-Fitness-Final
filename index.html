@@ -43,6 +43,7 @@
                 <li><a href="#plans">Pricing</a></li>
                 <li><a href="#review">Review</a></li>
                 <li><a href="Blog/blog.html">Blogs</a></li>
+                <li><a href="#" id="open-calorie">Calorie Calculator</a></li>
             </ul>
     
         </header>
@@ -442,42 +443,22 @@
     <!-- *********************************************** -->
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="contact-section">
-                <h2>Contact</h2>
-                <p class="contact-details">Address: 123, IT Lane, Andheri West, Mumbai, Maharashtra - 400053, India</p>
-                <br>
-                <p class="contact-details">Phone: +91 95948 85479 / +91 83295 03578</p>
-                <br>
-                <p class="contact-details">Time: 05:00 - 23:00</p>
-            </div>
-    
-            <div class="middle-section">
-                <h2>Follow Us</h2>
-                <div class="social">
-                    <a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a>
-                    <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
-                    <a href="https://www.youtube.com/"><i class="bx bxl-youtube"></i></a>
-                </div>
-            </div>
-    
-            <div class="links-section">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="form.html">Join Us</a></li>
-                    <li><a href="#">Our Products</a></li>
-                    <li><a href="Blog/blog.html">Blogs</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="https://rzp.io/rzp/fP1qkxYB">Payment Methods</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
+        <div class="footer-simple">
             <img class="logoimage" src="logo.jpeg" alt="logoimage">
-            <p class="copyright">&copy; Zenith Wave Fitness 2024 - All Rights Reserved</p>
+            <nav class="footer-links">
+                <a href="form.html">Join Us</a>
+                <a href="Our Products/index.html">Products</a>
+                <a href="Blog/blog.html">Blogs</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+                <a href="#">Support</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="bx bxl-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; Zenith Wave Fitness 2024</p>
         </div>
     </footer>
 
@@ -490,6 +471,60 @@
 
     <a href="Our Products/index.html" class="Our-Products">Our Products</a>
 
+    
+    <!-- Calorie Calculator Modal -->
+    <div class="modal-overlay" id="calorie-overlay" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="calorie-title">
+            <button class="modal-close" id="calorie-close" aria-label="Close">×</button>
+            <h2 id="calorie-title" class="modal-title">Calorie <span>Calculator</span></h2>
+            <form id="calorie-form" class="calorie-form" novalidate>
+                <div class="calorie-row">
+                    <label for="cc-gender">Gender</label>
+                    <select id="cc-gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="calorie-row">
+                    <label for="cc-age">Age (years)</label>
+                    <input type="number" id="cc-age" min="10" max="100" required placeholder="e.g., 28">
+                </div>
+                <div class="calorie-grid-2">
+                    <div class="calorie-row">
+                        <label for="cc-height">Height (cm)</label>
+                        <input type="number" id="cc-height" min="100" max="250" required placeholder="e.g., 175">
+                    </div>
+                    <div class="calorie-row">
+                        <label for="cc-weight">Weight (kg)</label>
+                        <input type="number" id="cc-weight" min="30" max="300" required placeholder="e.g., 70">
+                    </div>
+                </div>
+                <div class="calorie-row">
+                    <label for="cc-activity">Activity Level</label>
+                    <select id="cc-activity" required>
+                        <option value="1.2">Sedentary (little or no exercise)</option>
+                        <option value="1.375">Light (1-3 days/week)</option>
+                        <option value="1.55">Moderate (3-5 days/week)</option>
+                        <option value="1.725">Active (6-7 days/week)</option>
+                        <option value="1.9">Very Active (intense + physical job)</option>
+                    </select>
+                </div>
+                <div class="calorie-actions">
+                    <button type="submit" class="calorie-primary">Calculate</button>
+                    <button type="reset" class="calorie-secondary">Reset</button>
+                </div>
+            </form>
+            <div id="cc-results" class="calorie-results hidden">
+                <ul>
+                    <li><strong>Maintenance (TDEE):</strong> <span id="cc-tdee">-</span> kcal</li>
+                    <li><strong>Weight Loss (-15%):</strong> <span id="cc-cut">-</span> kcal</li>
+                    <li><strong>Weight Gain (+10%):</strong> <span id="cc-bulk">-</span> kcal</li>
+                </ul>
+                <p class="calorie-note">Based on Mifflin–St Jeor BMR formula.</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
     
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     

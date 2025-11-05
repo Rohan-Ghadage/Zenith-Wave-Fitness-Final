@@ -98,3 +98,88 @@ var swiper = new Swiper(".review-slider", {
       },
   },
 });
+
+// ================== Calorie Calculator (Modal) ==================
+(function () {
+  const openBtn = document.getElementById('open-calorie');
+  const overlay = document.getElementById('calorie-overlay');
+  const closeBtn = document.getElementById('calorie-close');
+
+  if (!openBtn || !overlay || !closeBtn) return;
+
+  function openModal() {
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  openBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    openModal();
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  const form = document.getElementById('calorie-form');
+  const genderEl = document.getElementById('cc-gender');
+  const ageEl = document.getElementById('cc-age');
+  const heightEl = document.getElementById('cc-height');
+  const weightEl = document.getElementById('cc-weight');
+  const activityEl = document.getElementById('cc-activity');
+  const tdeeEl = document.getElementById('cc-tdee');
+  const cutEl = document.getElementById('cc-cut');
+  const bulkEl = document.getElementById('cc-bulk');
+  const results = document.getElementById('cc-results');
+
+  function clamp(n, min, max) { return Math.min(Math.max(n, min), max); }
+  function parseNumber(inputEl) {
+    const n = Number((inputEl.value || '').trim());
+    return Number.isFinite(n) ? n : NaN;
+  }
+  function formatKcal(n) { return Math.round(n).toLocaleString(); }
+  function calculateBmr(gender, age, heightCm, weightKg) {
+    const base = 10 * weightKg + 6.25 * heightCm - 5 * age;
+    return gender === 'male' ? base + 5 : base - 161;
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const gender = genderEl.value;
+    let age = parseNumber(ageEl);
+    let height = parseNumber(heightEl);
+    let weight = parseNumber(weightEl);
+    const activity = Number(activityEl.value);
+
+    if (!Number.isFinite(age) || !Number.isFinite(height) || !Number.isFinite(weight) || !Number.isFinite(activity)) {
+      results.classList.add('hidden');
+      return;
+    }
+
+    age = clamp(age, 10, 100);
+    height = clamp(height, 100, 250);
+    weight = clamp(weight, 30, 300);
+
+    const bmr = calculateBmr(gender, age, height, weight);
+    const tdee = bmr * activity;
+    const cut = tdee * 0.85;
+    const bulk = tdee * 1.10;
+
+    tdeeEl.textContent = formatKcal(tdee);
+    cutEl.textContent = formatKcal(cut);
+    bulkEl.textContent = formatKcal(bulk);
+
+    results.classList.remove('hidden');
+  });
+})();
+// ================== End Calorie Calculator (Modal) ==================

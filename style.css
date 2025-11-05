@@ -88,22 +88,31 @@ header {
     margin-left: auto;
     align-items: center;
     font-family: -apple-system, sans-serif; 
+    gap: 0.6rem;
+    background: rgba(14, 14, 14, 0.6);
+    border: 1px solid #1f1f1f;
+    border-radius: 9999px; /* full rounded container */
+    padding: 0.4rem 0.6rem;
+    backdrop-filter: blur(6px);
 }
 
 .navbar a {
-    font-size: 2rem;
-    font-weight: 500;
-    color: var(--text-color);
-    margin-left: 4rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #e9e9e9;
+    margin-left: 0.8rem;
     margin-top: 0.3cm;
-    transition: 0.5s ease;
-    border-bottom: 3px solid transparent;
+    padding: 0.8rem 1.2rem;
+    border-radius: 9999px;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    border-bottom: none;
+    background: transparent;
 }
 
 .navbar a:hover,
 .navbar a:active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-btn {
@@ -144,16 +153,18 @@ header {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: var(--snd-bg-color);
-        width: 15%;
-        padding: 6rem;
+        top: 70px;
+        right: 5%;
+        background-color: #0e0e0e;
+        width: 90%;
+        padding: 2rem;
         text-align: center;
+        border: 1px solid #1f1f1f;
+        border-radius: 12px;
     }
 
     .navbar li {
-        padding-right: 2rem;
+        padding-right: 0;
         margin-top: 0.7rem;
     }
 
@@ -168,6 +179,7 @@ header {
     .menu-icon {
         display: block;
         margin-left: 0.7rem;
+        color: #ffffff;
     }
 
     /* Align items in a row in mobile/tablet mode */
@@ -923,99 +935,61 @@ a {
 
 /* Footer styles */
 .footer {
-    background: linear-gradient(135deg, #3F4F75, #1A237E); /* Gradient background */
+    background: #0a0a0a;
     color: #fff;
-    padding: 30px 20px; /* Reduced padding for smaller height */
+    padding: 28px 20px;
+    border-top: 1px solid #1f1f1f;
 }
 
-.footer-container {
+.footer-simple {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Distributes space between sections */
-    align-items: flex-start; /* Aligns items at the start */
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
 }
 
-.contact-section {
-    flex: 1; /* Allows the contact section to take available space */
+.footer .logoimage {
+    height: 44px;
+    border-radius: 12px;
 }
 
-.contact-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #FFEA00; /* Bright color for the heading */
-}
-
-.contact-details {
-    margin-bottom: 5px; /* Spacing between paragraphs */
-    font-size: 18px; /* Increased font size for contact details */
-}
-
-.middle-section {
-    flex: 1; /* Center section for social media */
-    text-align: center; /* Center the content in this section */
-}
-
-.middle-section h2 {
-    font-size: 24px; /* Follow Us heading size */
-    margin-bottom: 10px;
-    color: #FFEA00; /* Bright color for the heading */
-}
-
-.links-section {
-    flex: 1; /* Allows the links section to take available space */
-}
-
-.links-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #FFEA00; /* Bright color for the heading */
-}
-
-.links-section ul {
-    list-style-type: none; /* Removes bullet points */
-    padding: 0; /* Removes default padding */
-}
-
-.links-section ul li {
-    margin: 5px 0; /* Spacing between links */
-}
-
-.links-section a {
-    color: #FFEA00; /* Link color */
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s; /* Smooth transition for hover */
-}
-
-.links-section a:hover {
-    color: #FFC107; /* Color change on hover */
-}
-
-.footer-bottom {
+.footer-links {
     display: flex;
-    align-items: center; /* Center logo and text vertically */
-    justify-content: center; /* Center the logo and copyright */
-    margin-top: 10px; /* Adjusted margin to reduce gap */
-    font-size: 16px; /* Font size for copyright text */
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.footer-bottom .logoimage {
-    height: 50px; /* Control logo height if necessary */
-    margin-right: 10px; /* Space between logo and copyright text */
+.footer-links a {
+    color: #d8d8d8;
+    font-size: 1.5rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
 }
 
-.social {
+.footer-links a:hover {
+    background: #141414;
+    color: #fff;
+}
+
+.footer-social {
     display: flex;
-    gap: 15px; /* Space between icons */
-    justify-content: center; /* Center the social icons */
+    gap: 14px;
 }
 
-.social a {
-    color: #FFEA00; /* Icon color */
-    font-size: 24px; /* Size of the icons */
-    transition: color 0.3s; /* Smooth transition for hover */
+.footer-social a {
+    color: #bdbdbd;
+    font-size: 2.2rem;
+    transition: color 0.2s, transform 0.2s;
 }
 
-.social a:hover {
-    color: #FFC107; /* Color change on hover */
+.footer-social a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 /* ***************************************** */
 
@@ -1090,3 +1064,131 @@ a {
         font-size: 10px; /* Smaller font size for mobile */
     }
 }
+
+/* ================== Calorie Calculator Modal ================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    padding: 1.5rem;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 640px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+    max-height: 85vh;
+    overflow: auto;
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.calorie-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.calorie-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.calorie-form input,
+.calorie-form select {
+    background: #0e0e0e;
+    color: #f1f1f1;
+    border: 1px solid #2c2c2c;
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    font-size: 1.6rem;
+}
+
+.calorie-form input:focus,
+.calorie-form select:focus {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(255,77,79,0.2);
+}
+
+.calorie-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.calorie-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    align-items: stretch;
+}
+
+.calorie-secondary {
+    background: transparent;
+    border: 1px solid #444;
+    color: #ddd;
+    border-radius: 8px;
+    padding: 0.7rem 1.1rem;
+    cursor: pointer;
+}
+
+.calorie-primary {
+    flex: 1;
+    background: linear-gradient(135deg, #ff512f, #f09819);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.calorie-primary:hover {
+    filter: brightness(1.05);
+}
+
+.calorie-results {
+    margin-top: 1.2rem;
+    background: #0e0e0e;
+    border: 1px solid #222;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.calorie-results.hidden { display: none; }
+
+.calorie-results ul { list-style: none; padding: 0; margin: 0; }
+.calorie-results li { margin: 0.35rem 0; }
+.calorie-note { color: #bbb; font-size: 1.3rem; margin-top: 0.5rem; }
+
+@media (max-width: 700px) {
+    .calorie-grid-2 { grid-template-columns: 1fr; }
+}
+/* ================== End Calorie Calculator Modal ================== */
