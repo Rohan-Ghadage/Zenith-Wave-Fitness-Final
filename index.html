@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenith Wave Fitness</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="icon.png">
-    <!-- icons link -->
+    <!-- Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
     <!-- Link Swiper CSS for Slider -->
@@ -23,10 +28,7 @@
                 <a class="logo">Zenith Wave Fitness</a>
             </div>
             
-                <!-- Join us Button -->
-                <div class="top-btn">
-                    <a href="form.html" class="nav-btn">Join us</a>
-                </div>
+                <!-- Menu button for mobile -->
             <!-- menu button for responsiveness-->
 
             <div class="menu-icon" id="menu-icon">
@@ -35,7 +37,7 @@
                       
 
             
-            <ul class="navbar" >
+            <ul class="navbar">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services-content">Services</a></li>
                 <li ><a href="#Our Trainers">Trainers</a></li>
@@ -44,201 +46,156 @@
                 <li><a href="#review">Review</a></li>
                 <li><a href="Blog/blog.html">Blogs</a></li>
                 <li><a href="#" id="open-calorie">Calorie Calculator</a></li>
+                <li class="nav-join-btn"><a href="form.html" class="nav-btn">Join us</a></li>
             </ul>
     
         </header>
 <!-- ************************************************ -->
 
-         <!-- Swiper Container -->
-        <section class="swiper-section">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="swiperimg1.jpg" alt="Image 1" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="swiperimg2.jpg" alt="Image 2" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="swiperimg3.jpg" alt="Image 3" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="swiperimg4.jpg" alt="Image 4" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="swiperimg5.jpg" alt="Image 5" loading="lazy">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="swiperimg6.jpg" alt="Image 6" loading="lazy">
+         <!-- Hero Section with Services Ticker -->
+        <section class="hero-section">
+            <!-- Festive Sale Ticker -->
+            <div class="festive-ticker-container">
+                <div class="festive-ticker">
+                    <div class="festive-ticker-content">
+                        <span class="festive-text" style="color: black; background-color: white;">🎉 Festive sale is here upto 70% off checkout the store. 🛍️</span>
+                        <span class="festive-text" style="color: black; background-color: white;">🎉 Festive sale is here upto 70% off checkout the store. 🛍️</span>
+                        <span class="festive-text" style="color: black; background-color: white;">🎉 Festive sale is here upto 70% off checkout the store. 🛍️</span>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- MUltiple text -->
+        
         <section class="home" id="home">
             <div class="home-content" data-aos="zoom-in">
                 <h3>Build Your Dream Physique</h3>
-                
                 <h3><span class="mulitple-text"></span></h3>
             </div>        
-        </section>    
-
-        <br>
-        <!-- ************************************************** -->
-
-        <!-- Service section code -->
-    <section class="service" id="services-content" >
-        <!-- id="services" -->
-        <h2 class="heading" data-aos="zoom-in-down">Our <span>Services</span></h2>
-
-        <div class="services-content" data-aos="zoom-in-up">
-            <div class="row">
-                <img src="physical fitness.jpg" alt="" loading="lazy">
-                <h4>Physical Fitness</h4>
-            </div>
-            
-            <div class="row">
-                <img src="weight gain.jpeg" alt="" loading="lazy">
-                <h4>Weight Gain</h4>
-            </div>
-                              
-            <div class="row">
-                <img src="strength.jpg" alt="" loading="lazy">
-                <h4>Strength Training</h4>
-            </div>
-
-            <div class="row">
-                <img src="fat loss.jpg" alt="" loading="lazy">
-                <h4>Fat Lose</h4>
-            </div>
-
-            <div class="row">
-                <img src="zumba.jpeg" alt="" loading="lazy">
-                <h4>Zumba</h4>
-            </div>
-
-            <div class="row">
-                <img src="Yoga.jpg" alt="" loading="lazy">
-                <h4>Yoga</h4>
-            </div>
-            <div class="row">
-                <img src="karate.jpg" alt="" loading="lazy">
-                <h4>Karate</h4>
-            </div>
-            <div class="row">
-                <img src="martialArts.jpg" alt="" loading="lazy">
-                <h4>Martial Arts</h4>
-            </div>
-            <div class="row">
-                <img src="swimming.jpg" alt="" loading="lazy">
-                <h4>Swimming</h4>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <!-- ************************************************** -->
 
-    <!-- Our Trainers -->
-    <!-- Trainers Information code -->
-    <section class="Trainers" id="Our Trainers">
-        <h2 class="heading" data-aos="zoom-in-down">Our <span>Trainers</span></h2>  
-        <br>
-        <br> 
+    <!-- ===== Trainers Section ===== -->
+    <section class="Trainers" id="trainers">
+        <h2 class="heading" data-aos="fade-up">Meet Our <span>Expert Trainers</span></h2>
+        
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
+                    <!-- Trainer 1 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-1"></span>
-    
                             <div class="card-image">
-                                <img src="images/5.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/5.jpg" alt="Rohan Shetty - Strength & Bodybuilding Trainer" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">Rohan Shetty</h2>
-                            <p class="description">Hi, I am Rohan Shetty, a certified personal trainer specializing in strength training and bodybuilding. Let's work together to build your strength and confidence!</p>
+                            <h3 class="name">Rohan Shetty</h3>
+                            <span class="trainer-specialty">Strength & Bodybuilding</span>
+                            <p class="description">Certified personal trainer with a passion for helping clients build strength and confidence through structured training programs.</p>
+                            <div class="trainer-experience">
+                                <span>5+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Trainer 2 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-2"></span>
-    
                             <div class="card-image">
-                                <img src="images/G3.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/G3.jpg" alt="Emily Collins - Functional Training & Yoga" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">Emily Collins</h2>
-                            <p class="description">Hi, I am Emily Collins, a functional training and yoga expert with 7 years of experience. I believe in holistic fitness that focuses on both the body and mind.</p>
+                            <h3 class="name">Emily Collins</h3>
+                            <span class="trainer-specialty">Functional Training & Yoga</span>
+                            <p class="description">Holistic fitness expert focusing on functional movement patterns, mobility, and the mind-body connection.</p>
+                            <div class="trainer-experience">
+                                <span>7+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Trainer 3 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-3"></span>
-    
                             <div class="card-image">
-                                <img src="images/4.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/4.jpg" alt="Thomas Baker - CrossFit & HIIT Specialist" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">Thomas Baker</h2>
-                            <p class="description">I am Thomas Baker, a CrossFit Level 1 trainer and expert for HIIT and functional fitness. I am committed to pushing you beyond your limits.</p>
+                            <h3 class="name">Thomas Baker</h3>
+                            <span class="trainer-specialty">CrossFit & HIIT</span>
+                            <p class="description">CrossFit Level 1 trainer specializing in high-intensity interval training and functional fitness for all levels.</p>
+                            <div class="trainer-experience">
+                                <span>6+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Trainer 4 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-4"></span>
-    
                             <div class="card-image">
-                                <img src="images/2.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/2.jpg" alt="Prashant Rao - Sports Conditioning" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">Prashant Rao</h2>
-                            <p class="description">Hi, I am Prashant Rao, a sports conditioning and endurance training expert. I help athletes and fitness enthusiasts improve their performance.</p>
+                            <h3 class="name">Prashant Rao</h3>
+                            <span class="trainer-specialty">Sports Conditioning</span>
+                            <p class="description">Performance coach helping athletes and fitness enthusiasts reach their peak potential through specialized training.</p>
+                            <div class="trainer-experience">
+                                <span>8+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Trainer 5 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-5"></span>
-    
                             <div class="card-image">
-                                <img src="images/G2.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/G2.jpg" alt="Grace Morgan - Weight Loss & Nutrition" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">Grace Morgan</h2>
-                            <p class="description"> I am Grace Morgan, a weight loss and nutrition coach with 6 years of experience. I am here to guide you on your journey to a healthier lifestyle.</p>
-    
+                            <h3 class="name">Grace Morgan</h3>
+                            <span class="trainer-specialty">Weight Loss & Nutrition</span>
+                            <p class="description">Nutrition coach and weight management specialist creating sustainable lifestyle changes for long-term results.</p>
+                            <div class="trainer-experience">
+                                <span>6+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
+                    
+                    <!-- Trainer 6 -->
                     <div class="card swiper-slide">
                         <div class="image-content">
-                            <span class="overlay" id="overlay-6"></span>
-    
                             <div class="card-image">
-                                <img src="images/3.jpg" alt="" class="card-img" loading="lazy">
+                                <img src="images/3.jpg" alt="George Wilson - Pilates & Mobility" class="card-img" loading="lazy">
                             </div>
                         </div>
-    
+                        
                         <div class="card-content">
-                            <h2 class="name">George Wilson</h2>
-                            <p class="description">Hi, I am George Wilson, a Pilates and mobility training specialist. With 4 years of experience, I focus on improving flexibility, posture, and core strength.</p>
+                            <h3 class="name">George Wilson</h3>
+                            <span class="trainer-specialty">Pilates & Mobility</span>
+                            <p class="description">Specialist in improving flexibility, posture, and core strength through Pilates and mobility training.</p>
+                            <div class="trainer-experience">
+                                <span>4+ Years Experience</span>
+                            </div>
                         </div>
                     </div>
-    
                 </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
-    
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
         </div>
     </section>
      
@@ -264,93 +221,59 @@
     </section>
     
     <!-- *********************************************** -->
-    <!-- Pricing section -->
+    <!-- ===== Pricing Section ===== -->
     <section class="pricing-section" id="plans">
+        <h2 class="heading" data-aos="fade-up">Membership Plans</h2>
+        <p>Choose the perfect plan that fits your fitness journey. All plans include access to our world-class facilities and expert guidance.</p>
+        
+        <div class="pricing-container">
+            <!-- Basic Plan -->
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="plan-name">Basic</div>
+                <div class="plan-price">₹499<span>per month</span></div>
+                <ul class="plan-features">
+                    <li>Access to gym floor & equipment</li>
+                    <li>Locker room access</li>
+                    <li>Basic group classes</li>
+                    <li>Free Wi-Fi</li>
+                    <li class="disabled">Personal training</li>
+                    <li class="disabled">Premium facilities</li>
+                </ul>
+                <a href="https://rzp.io/rzp/NWJ3FS3E" class="pricing-btn">Get Started</a>
+            </div>
 
-        <h1 class="ourPlans" id="ourPlans"></a>Our Plans</h1>
-        <div class="card-container">
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h2>Basic Plan</h2>
-                        <br>
-                        <ul>
-                            <li>Access to limited facilities and equipment</li>
-                            <br>
-                            <li>Services Included <br>
-                                1.Physical Training <br>
-                                2.Strength Training <br>
-                                3.No Personal Training <br>
-                
-                            </li>
-                            <br>
-                            <li>Ideal for self-guided fitness or group workout enthusiasts</li>    
-                            <br>
-                        </ul>
-                    </div>
-                    <div class="card-back">
-                        <h2>Price</h2>
-                        <br>
-                        <p>₹ 499/month</p>
-                        <br>
-                        <a  href="https://rzp.io/rzp/NWJ3FS3E">
-                            <button  class="BuyNow" >Buy Now</button>
-                        </a>
-                        <!-- <button class="BuyNow">Buy Now</button> -->
-                    </div>
-                </div>
+            <!-- Premium Plan (Most Popular) -->
+            <div class="pricing-card popular" data-aos="fade-up" data-aos-delay="200">
+                <div class="plan-name">Premium</div>
+                <div class="plan-price">₹899<span>per month</span></div>
+                <ul class="plan-features">
+                    <li>Everything in Basic, plus:</li>
+                    <li>Unlimited group classes</li>
+                    <li>Personal training (2 sessions/month)</li>
+                    <li>Access to premium facilities</li>
+                    <li>Nutritional guidance</li>
+                    <li>Progress tracking</li>
+                </ul>
+                <a href="https://rzp.io/rzp/fP1qkxYB" class="pricing-btn">Get Premium</a>
             </div>
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h2>Premium Plan</h2>
-                        <br>
-                        <ul>Includes everything from the Basic Plan</ul>
-                        <br>
-                        <ul>Personalized training sessions tailored to individual fitness goals</ul>
-                        <br>
-                        <ul>Access to premium facilities like private locker rooms, sauna</ul>
-                        <br>
-                    </div>
-                    <div class="card-back">
-                        <h2>Price</h2>
-                        <br>
-                        <p>₹ 899/month</p>
-                        <br>
-                        <a  href="https://rzp.io/rzp/fP1qkxYB">
-                            <button  class="BuyNow" >Buy Now</button>
-                        </a>
-                        <!-- <button class="BuyNow">Buy Now</button> -->
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h2>Family Plan</h2>
-                        <br>
-                        <ul>Allows up to four family members to access gym facilities and group classes</ul>
-                        <br>
-                        <ul>Encourages family fitness with flexible options to suit individual goals</ul>
-                        <br>
-                        <ul>Full access for all members, ensuring a shared fitness experience</ul>
-                        <br>
-                    </div>
-                    <div class="card-back">
-                        <h2>Price</h2>
-                        <br>
-                        <p>₹ 1299/month</p>
-                        <br>
-                        <a  href="https://rzp.io/rzp/ZuX8BS6">
-                            <button  class="BuyNow" >Buy Now</button>
-                        </a>
-                        <!-- <button class="BuyNow">Buy Now</button> -->
-                    </div>
-                </div>
+
+            <!-- Family Plan -->
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="plan-name">Family</div>
+                <div class="plan-price">₹1,299<span>for up to 4 members</span></div>
+                <ul class="plan-features">
+                    <li>Everything in Premium, plus:</li>
+                    <li>Up to 4 family members</li>
+                    <li>Shared access to all facilities</li>
+                    <li>Family fitness assessment</li>
+                    <li>Priority class booking</li>
+                    <li>Exclusive family events</li>
+                </ul>
+                <a href="https://rzp.io/rzp/5XoZx0B" class="pricing-btn">Choose Family</a>
             </div>
         </div>
     </section>
-
+    
     <!-- ************************************************************ -->
         
         
