@@ -1,33 +1,143 @@
-<html>
-    <head>
-        <title>Payment</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin-top: 50px;
-            }
-            .container {
-                margin-top: 20px;
-            }
-            a {
-                padding: 10px 20px;
-                background: linear-gradient(90deg, #4caf50, #1b5e20);
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                font-size: 18px;
-            }
-            a:hover {
-                background: linear-gradient(90deg, #388e3c, #004d40);
-            }
-        </style>
-    </head>
-    <body>
-        <h2>Data Submitted Successfully!</h2>
-        <p>Thank you for submitting your details. You can now proceed to payment.</p>
-        <div class="container">
-            <a href="https://rzp.io/rzp/ZuX8BS6" target="_blank">Proceed to Payment</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Zenith Wave Fitness</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .success-container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--success);
+            margin-bottom: 1.5rem;
+            animation: bounce 1s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .success-title {
+            color: var(--text);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .success-message {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .payment-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            margin: 1rem 0;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .payment-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        .payment-button i {
+            font-size: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        .logo {
+            max-width: 180px;
+            margin-bottom: 1.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <a href="index.html" class="back-button">
+                <i class='bx bx-arrow-back'></i>
+                <span>Back to Home</span>
+            </a>
+            <img src="logo.jpeg" alt="Zenith Wave Fitness" class="form-logo" loading="lazy">
+            <h1>Payment Confirmation</h1>
+            <p>Complete your membership process</p>
         </div>
-    </body>
+
+        <div class="success-container">
+            <div class="success-icon">
+                <i class='bx bx-check-circle'></i>
+            </div>
+            <h2 class="success-title">Registration Successful!</h2>
+            <p class="success-message">
+                Thank you for joining Zenith Wave Fitness! Your registration details have been received. 
+                Please complete your payment to activate your membership and access all our facilities.
+            </p>
+            
+            <a href="https://rzp.io/rzp/ZuX8BS6" class="payment-button" target="_blank">
+                <i class='bx bx-credit-card'></i>
+                <span>Proceed to Payment</span>
+            </a>
+            
+            <p style="color: var(--gray-400); font-size: 0.9rem; margin-top: 1.5rem;">
+                <i class='bx bx-lock-alt'></i> Secure payment powered by Razorpay
+            </p>
+            
+            <a href="index.html" class="back-link">
+                <i class='bx bx-home'></i> Return to Homepage
+            </a>
+        </div>
+    </div>
+</body>
 </html>
