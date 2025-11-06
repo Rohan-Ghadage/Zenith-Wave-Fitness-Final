@@ -1,324 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Store - Premium Fitness Gear & Accessories</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../icon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-dark: #2563eb;
+            --secondary: #10b981;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --background: #f8fafc;
+            --white: #ffffff;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 0.5rem;
+            --radius-lg: 0.75rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-		<div class="navbar">
-		  <div class="logo">
-		
-			<img src="images/logo1.jpg">
-		  </div>
-		  <div id="logotext"><H2> ZENITH STORE</H2></div>
-		  <nav>
-						<ul id="MenuItems">
-			  <li><a href="index.html">Home</a></li>
-			  <li><a href="product.html">Products</a></li>
-			  <li><a href="#">About</a></li>
-			  <li><a href="#">Contact</a></li>
-			  <li><a href="account.html">Account</a></li>
-			</ul>
-		  </nav>
-		  <a href="cart.html"><img src="https://i.ibb.co/PNjjx3y/cart.png" alt="" width="30px" height="30px" /></a>
-		  <img src="https://i.ibb.co/6XbqwjD/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
-		</div>
-	  </div>
-	  
-	  <div class="small-container">
-		<div class="row row-2">
-		  <h2>All Products</h2>
-		  
-		</div>
-		<div class="row">
-		  <div class="col-4">
-			<img src="images/tshirt.jpeg" alt="" />
-			<h4>White Printed T-shirt</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹499.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/hrxblack.jpg" alt="" />
-			<h4>Hrx Shoes</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹899.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/track.jpg" alt="" />
-			<h4>Track</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star-half-alt"></i>
-			</div>
-			<p>₹599.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/bluepuma.jpg" alt="" />
-			<h4>Puma Blue T-shirt</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹699.00</p>
-		  </div>
-		</div>
-	  
-		<div class="row">
-		  <div class="col-4">
-			<img src="images/gloves.jpeg" alt="" />
-			<h4>Gloves</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹299.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/bag.jpeg" alt="" />
-			<h4>Bag</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹699.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/shorts.jpeg" alt="" />
-			<h4>Shortst</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star-half-alt"></i>
-			</div>
-			<p>₹399.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/keratin.jpg" alt="" />
-			<h4>Protein Powder</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹999.00</p>
-		  </div>
-		</div>
-	  
-		<div class="row">
-		  <div class="col-4">
-			<img src="images/yoga.jpeg" alt="" />
-			<h4>Yoga Mat</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹449.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/blackpuma.jpg" alt="" />
-			<h4>Black Puma Tshirt</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹499.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/socks.jpg" alt="" />
-			<h4>Hrx socks(3 Pairs)</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star-half-alt"></i>
-			</div>
-			<p>₹229.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/watch.jpg" alt="" />
-			<h4>Black fossil watch</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹1299.00</p>
-		  </div>
-		</div>
-	  
-		<div class="row">
-		  <div class="col-4">
-			<img src="images/resiatnce band.jpg" alt="" />
-			<h4>Red Printed T-shirt</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹149.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/sparx shoes.jpg" alt="" />
-			<h4>Sparx Shoes</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹799.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/casual.jpg" alt="" />
-			<h4>Casual Shoes</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star-half-alt"></i>
-			</div>
-			<p>₹500.00</p>
-		  </div>
-	  
-		  <div class="col-4">
-			<img src="images/water.jpeg" alt="" />
-			<h4>Water Bottle</h4>
-			<div class="rating">
-			  <i class="fas fa-star"></i>
-			  <i class="fas fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			  <i class="far fa-star"></i>
-			</div>
-			<p>₹399.00</p>
-		  </div>
-		</div>
-	  
-		<div class="page-btn">
-		  <span>1</span>
-		  <span>2</span>
-		  <span>3</span>
-		  <span>4</span>
-		  <span>&#8594;</span>
-		</div>
-	  </div>
-	  
-	  <!-- Footer -->
-	  <div class="footer">
-		<div class="container">
-		  <div class="row">
-			<div class="footer-col-1">
-			  <h3>Download Our App</h3>
-			  <p>Download App for Android and iso mobile phone.</p>
-			  <div class="app-logo">
-				<img src="https://i.ibb.co/KbPTYYQ/play-store.png" alt="" />
-				<img src="https://i.ibb.co/hVM4X2p/app-store.png" alt="" />
-			  </div>
-			</div>
-	  
-			<div class="footer-col-2">
-			  <img src="images/logo1.jpg" alt="" />
-			  <p>
-				Our Purpose Is To Sustainably Make the Pleasure and Benefits of
-				Sports Accessible to the Many.
-			  </p>
-			</div>
-	  
-			<div class="footer-col-3">
-			  <h3>Useful Links</h3>
-			  <ul>
-				<li>Coupons</li>
-				<li>Blog Post</li>
-				<li>Return Policy</li>
-				<li>Join Affiliate</li>
-			  </ul>
-			</div>
-	  
-			<div class="footer-col-4">
-			  <h3>Follow us</h3>
-			  <ul>
-				<li>Facebook</li>
-				<li>Twitter</li>
-				<li>Instagram</li>
-				<li>YouTube</li>
-			  </ul>
-			</div>
-		  </div>
-		  <hr />
-		  <p class="copyright">Copyright &copy; 2024 - Zenith Store</p>
-		</div>
-	  </div>
-	  
-	  <!-- js for toggle menu -->
-	  <script>
-		var MenuItems = document.getElementById('MenuItems');
-		MenuItems.style.maxHeight = '0px';
-	  
-		function menutoggle() {
-		  if (MenuItems.style.maxHeight == '0px') {
-			MenuItems.style.maxHeight = '200px';
-		  } else {
-			MenuItems.style.maxHeight = '0px';
-		  }
-		}
-	  </script>
-	  
-	  
-	  
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo-container">
+                    <a href="../index.html">
+                        <img src="../logo.jpeg" alt="Zenith Wave Fitness" class="logo">
+                        <span class="logo-text">ZENITH STORE</span>
+                    </a>
+                </div>
+                
+                <nav class="main-nav">
+                    <ul class="nav-links" id="MenuItems">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#" class="active">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="nav-actions">
+                    <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="menu-toggle" onclick="menutoggle()" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Premium Fitness Gear</h1>
+            <p>Elevate your workout with our high-quality fitness equipment and apparel</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <div class="filter-options">
+                    <select name="category" id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="apparel">Apparel</option>
+                        <option value="footwear">Footwear</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="supplements">Supplements</option>
+                    </select>
+                    <select name="sort" id="sort-by">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/tshirt.jpeg" alt="White Printed T-shirt" loading="lazy">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <span class="discount-tag">-20%</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Apparel</span>
+                        <h3 class="product-title">White Printed T-shirt</h3>
+                        <div class="rating">
+                            <div class="stars" style="--rating: 4;"></div>
+                            <span class="review-count">(24)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹499.00</span>
+                            <span class="original-price">₹599.00</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/hrxblack.jpg" alt="HRX Shoes" loading="lazy">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Footwear</span>
+                        <h3 class="product-title">HRX Running Shoes</h3>
+                        <div class="rating">
+                            <div class="stars" style="--rating: 3.5;"></div>
+                            <span class="review-count">(18)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹899.00</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/track.jpg" alt="Track Pants" loading="lazy">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <span class="new-tag">New</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Apparel</span>
+                        <h3 class="product-title">Premium Track Pants</h3>
+                        <div class="rating">
+                            <div class="stars" style="--rating: 4.5;"></div>
+                            <span class="review-count">(32)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹599.00</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/bluepuma.jpg" alt="Puma T-shirt" loading="lazy">
+                        <div class="product-actions">
+                            <button class="quick-view" title="Quick View"><i class="fas fa-eye"></i></button>
+                            <button class="add-to-wishlist" title="Add to Wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                        <span class="sale-tag">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="category">Apparel</span>
+                        <h3 class="product-title">Puma Blue T-shirt</h3>
+                        <div class="rating">
+                            <div class="stars" style="--rating: 3;"></div>
+                            <span class="review-count">(12)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹699.00</span>
+                            <span class="original-price">₹899.00</span>
+                        </div>
+                        <button class="add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/gloves.jpeg" alt="" />
+                        <h4>Gloves</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹299.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/bag.jpeg" alt="" />
+                        <h4>Bag</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹699.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/shorts.jpeg" alt="" />
+                        <h4>Shortst</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>₹399.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/keratin.jpg" alt="" />
+                        <h4>Protein Powder</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹999.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/yoga.jpeg" alt="" />
+                        <h4>Yoga Mat</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹449.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/blackpuma.jpg" alt="" />
+                        <h4>Black Puma Tshirt</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹499.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/socks.jpg" alt="" />
+                        <h4>Hrx socks(3 Pairs)</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>₹229.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/watch.jpg" alt="" />
+                        <h4>Black fossil watch</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹1299.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/resiatnce band.jpg" alt="" />
+                        <h4>Red Printed T-shirt</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹149.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/sparx shoes.jpg" alt="" />
+                        <h4>Sparx Shoes</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹799.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/casual.jpg" alt="" />
+                        <h4>Casual Shoes</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>₹500.00</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/water.jpeg" alt="" />
+                        <h4>Water Bottle</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>₹399.00</p>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link next">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest products and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="../logo.jpeg" alt="Zenith Store" class="footer-logo">
+                    <p>Your one-stop destination for premium fitness gear and accessories. We're committed to helping you achieve your fitness goals with high-quality products.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fitness Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@zenithstore.com</li>
+                    </ul>
+                    <div class="payment-methods">
+                        <img src="https://i.ibb.co/Qfvn4z6/payment.png" alt="Payment Methods">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Zenith Store. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Policy</a>
+                    <a href="#">Returns & Refunds</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = () => {
+            const menuItems = document.getElementById('MenuItems');
+            menuItems.style.maxHeight = menuItems.style.maxHeight === '0px' ? '500px' : '0px';
+        };
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+            
+            // Show/Hide scroll to top button
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'flex';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+
+        // Scroll to Top Functionality
+        document.getElementById('scrollToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add to Cart Animation
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cartCount = document.querySelector('.cart-count');
+                let count = parseInt(cartCount.textContent) || 0;
+                cartCount.textContent = count + 1;
+                
+                // Add animation
+                cartCount.classList.add('pulse');
+                setTimeout(() => {
+                    cartCount.classList.remove('pulse');
+                }, 500);
+                
+                // Show added to cart message
+                const message = document.createElement('div');
+                message.className = 'cart-message';
+                message.textContent = 'Added to cart!';
+                document.body.appendChild(message);
+                
+                setTimeout(() => {
+                    message.classList.add('show');
+                    setTimeout(() => {
+                        message.classList.remove('show');
+                        setTimeout(() => {
+                            document.body.removeChild(message);
+                        }, 300);
+                    }, 2000);
+                }, 50);
+            });
+        });
+
+        // Initialize tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltips = document.querySelectorAll('[title]');
+            tooltips.forEach(tooltip => {
+                tooltip.setAttribute('data-tooltip', tooltip.getAttribute('title'));
+                tooltip.removeAttribute('title');
+            });
+        });
+    </script>
 </body>
 </html>

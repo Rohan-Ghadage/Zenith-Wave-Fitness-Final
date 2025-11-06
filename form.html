@@ -3,78 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form Zenith Wave Fitness</title>    
+    <title>Join Zenith Wave Fitness</title>    
     <link rel="stylesheet" href="form.css">
-    <link rel="icon" type="image/x-icon" href="icon.png"> 
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-
-    <form id="registrationform">
-        <h2>Register for Zenith Wave Fitness</h2>
-
-        <!-- Full Name: must contain at least 3 letters -->
-        <input type="text" id="input" name="full_name" placeholder="Full Name" 
-       required pattern="[A-Za-z\s]+"><br>
-
-        <!-- Email: standard HTML5 validation -->
-        <input type="email" id="input" name="email" placeholder="Email" required><br>
-
-        <!-- Phone: 10-digit numeric only -->
-        <input type="tel" id="input" name="phone" placeholder="Phone Number" 
-               required pattern="[0-9]{10}"><br>
-
-        <!-- Membership Plan -->
-        <select id="input" name="membership_plan" required>
-          <option value="" disabled selected>Membership Plan</option>
-          <option value="basic">Basic</option>
-          <option value="premium">Premium</option>
-          <option value="family">Family Plan</option>
-        </select><br>
-
-        <!-- Address: at least 5 characters -->
-        <input type="text" id="input" name="address" placeholder="Address" 
-               required minlength="5" 
-               title="Please enter a valid address."><br>
-
-        <!-- Gender -->
-        <select id="input" name="gender" required>
-          <option value="" disabled selected>Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select><br>
-
-        <!-- Date of Birth -->
-        <input type="date" id="input" name="dob" required><br>
-
-        <!-- Fitness Goals -->
-        <select id="input" name="goals" required title="Please select your fitness goal.">
-          <option value="" disabled selected>Select your Fitness Goal</option>
-          <option value="weight_gain">Weight Gain</option>
-          <option value="weight_loss">Weight Loss</option>
-        </select><br>
-
-
-        <!-- Terms Checkbox -->
-        <label>
-            <input type="checkbox" id="checkbox" name="terms" required> 
-            I agree to the Terms and Conditions
-        </label><br><br>
-
-        <!-- Button: use 'onsubmit' to prevent redirect until validation passes -->
-        <div class="button-container">
-            <button type="submit" class="register" 
-                    onclick="
-                        const form = document.getElementById('registrationform');
-                        if (form.reportValidity()) {
-                            window.location.href='popup.html';
-                        }
-                        return false;
-                    ">
-                Register
-            </button>
+    <div class="form-container">
+        <div class="form-header">
+            <a href="index.html" class="back-button">
+                <i class='bx bx-arrow-back'></i>
+                <span>Back to Home</span>
+            </a>
+            <img src="logo.jpeg" alt="Zenith Wave Fitness" class="form-logo" loading="lazy">
+            <h1>Join Our Fitness Community</h1>
+            <p>Start your fitness journey with us today</p>
         </div>
 
-    </form>
+        <form id="registrationform" class="zenith-form">
+            <div class="form-grid">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="full_name">Full Name</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-user'></i>
+                        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required pattern="[A-Za-z\s]+">
+                    </div>
+                </div>
 
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-phone'></i>
+                        <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-calendar'></i>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div class="select-wrapper">
+                        <i class='bx bx-chevron-down'></i>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                            <option value="prefer-not-to-say">Prefer not to say</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Membership Plan -->
+                <div class="form-group">
+                    <label for="membership_plan">Membership Plan</label>
+                    <div class="select-wrapper">
+                        <i class='bx bx-chevron-down'></i>
+                        <select id="membership_plan" name="membership_plan" required>
+                            <option value="" disabled selected>Select a Plan</option>
+                            <option value="basic">Basic - ₹499/month</option>
+                            <option value="premium">Premium - ₹899/month</option>
+                            <option value="family">Family Plan - ₹1,299/month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Fitness Goals -->
+                <div class="form-group">
+                    <label for="goals">Fitness Goals</label>
+                    <div class="select-wrapper">
+                        <i class='bx bx-target-lock'></i>
+                        <select id="goals" name="goals" required>
+                            <option value="" disabled selected>Select your primary goal</option>
+                            <option value="weight_loss">Weight Loss</option>
+                            <option value="muscle_gain">Muscle Gain</option>
+                            <option value="strength_training">Strength Training</option>
+                            <option value="general_fitness">General Fitness</option>
+                            <option value="sports_performance">Sports Performance</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group full-width">
+                    <label for="address">Address</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-map'></i>
+                        <input type="text" id="address" name="address" placeholder="Your full address" required minlength="5">
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="form-group">
+                    <label for="emergency_contact">Emergency Contact</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-phone-call'></i>
+                        <input type="tel" id="emergency_contact" name="emergency_contact" placeholder="Emergency phone number" pattern="[0-9]{10}">
+                    </div>
+                </div>
+
+                <!-- Medical Conditions -->
+                <div class="form-group full-width">
+                    <label for="medical_conditions">Medical Conditions (if any)</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-plus-medical'></i>
+                        <input type="text" id="medical_conditions" name="medical_conditions" placeholder="Please list any medical conditions">
+                    </div>
+                </div>
+
+                <!-- Referral Code -->
+                <div class="form-group">
+                    <label for="referral">Referral Code (optional)</label>
+                    <div class="input-with-icon">
+                        <i class='bx bx-gift'></i>
+                        <input type="text" id="referral" name="referral" placeholder="Enter referral code if any">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="form-group terms-container">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                    <span>Become a Member</span>
+                    <i class='bx bx-arrow-right'></i>
+                </button>
+                <p class="login-link">Already have an account? <a href="#">Sign in</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registrationform').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (this.reportValidity()) {
+                // Form is valid, show success message or redirect
+                window.location.href = 'popup.html';
+            }
+        });
+    </script>
 </body>
 </html>
